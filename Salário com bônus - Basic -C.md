@@ -8,16 +8,17 @@ linguagem utilizada: C
 ===============================================================================================================
 resolution:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main(){
-    char f[1000];
-    double v,fx;
-    scanf("%s %lf %lf",f,&fx,&v);
+    int main(){
     
-    double comissao = v*0.15;
-    double total = comissao+fx;
-   
-    printf("TOTAL = R$ %.2lf\n",total);
-    return 0;
-}
+        char f[1000];
+        double v,fx;
+        scanf("%s %lf %lf",f,&fx,&v);
+
+        double comissao = v*0.15;
+        double total = comissao+fx;
+
+        printf("TOTAL = R$ %.2lf\n",total);
+        return 0;
+    }
