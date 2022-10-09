@@ -6,7 +6,7 @@ e informe-o expresso no formato horas:minutos:segundos.
 linguagem utilizada: C
 ===============================================================================================================
 resolution:
-
+ 
 #include<stdio.h>
 
 int main(){
