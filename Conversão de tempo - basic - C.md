@@ -1,13 +1,19 @@
 Use a função display the source blob (<>) para visualizar melhor meu código!
 ===============================================================================================================
+<<<<<<< HEAD
 código feito com base nessa questão:
 
 Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento em uma fábrica, e informe-o expresso no formato horas:minutos:segundos.
 ===============================================================================================================
+=======
+Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento em uma fábrica,
+e informe-o expresso no formato horas:minutos:segundos.
+ 
+>>>>>>> 5cf0879bf0f346bf549da333915a622005eeaa69
 linguagem utilizada: C
 ===============================================================================================================
 resolution:
-
+ 
 #include<stdio.h>
 
 int main(){
