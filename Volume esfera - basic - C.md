@@ -1,7 +1,10 @@
-código feito com base nessa questão.
+Use a função display the source blob (<>) para visualizar melhor meu código!
 ===============================================================================================================
-Faça um programa que calcule e mostre o volume de uma esfera sendo fornecido o valor de seu raio (R). A fórmula para calcular o volume é: (4/3) * pi * R3. Considere (atribua) para pi o valor 3.14159.
+código feito com base nessa questão:
 
+Faça um programa que calcule e mostre o volume de uma esfera sendo fornecido o valor de seu raio (R). 
+A fórmula para calcular o volume é: (4/3) * pi * R3. Considere (atribua) para pi o valor 3.14159.
+===============================================================================================================
 linguagem utilizada: C
 ===============================================================================================================
 resolution:
