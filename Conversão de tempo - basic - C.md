@@ -11,14 +11,14 @@ linguagem utilizada: C
 ===============================================================================================================
 resolution:
  
-#include<stdio.h>
+	#include<stdio.h>
 
-int main(){
-	int d,m,a,dd;
-	scanf("%d",&d);
-	a = d/3600;
-	m = (d - a*3600)/60;
-	dd = d - (a*3600 + m*60);
-	printf("%d:%d:%d\n",a,m,dd);
-    return 0;
-}
+	int main(){
+		int d,m,a,dd;
+		scanf("%d",&d);
+		a = d/3600;
+		m = (d - a*3600)/60;
+		dd = d - (a*3600 + m*60);
+		printf("%d:%d:%d\n",a,m,dd);
+	    return 0;
+	}
