@@ -1,13 +1,15 @@
-Use a função display the source blob (<>) para visualizar melhor meu código!
-===============================================================================================================
 código feito com base nessa questão:
+=====
 
 Leia a hora inicial, minuto inicial, hora final e minuto final de um jogo. A seguir calcule a duração do jogo.
+
 Obs: O jogo tem duração mínima de um (1) minuto e duração máxima de 24 horas.
-===============================================================================================================
-linguagem utilizada: C
-===============================================================================================================
-resolution:
+
+*linguagem utilizada: C*
+
+Resolution:
+
+=====
 
     #include <stdio.h>
     int main()

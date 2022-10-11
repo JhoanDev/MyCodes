@@ -1,13 +1,17 @@
-Use a função display the source blob (<>) para visualizar melhor meu código!
-===============================================================================================================
 código feito com base nessa questão:
+=====
 
-Pedrinho está organizando um evento em sua Universidade. O evento deverá ser no mês de Abril, iniciando e terminando dentro do mês. O problema é que Pedrinho quer calcular o tempo que o evento vai durar, uma vez que ele sabe quando inicia e quando termina o evento.
+Pedrinho está organizando um evento em sua Universidade. O evento deverá ser no mês de Abril, iniciando e terminando dentro do mês.
+
+O problema é que Pedrinho quer calcular o tempo que o evento vai durar, uma vez que ele sabe quando inicia e quando termina o evento.
+
 Sabendo que o evento pode durar de poucos segundos a vários dias, você deverá ajudar Pedrinho a calcular a duração deste evento.
-===============================================================================================================
-linguagem utilizada: Python
-===============================================================================================================
-resolution:
+
+*linguagem utilizada: Python*
+
+Resolution:
+
+=====
 
     dia,dat1=input().split()
     dat1 = int(dat1)
