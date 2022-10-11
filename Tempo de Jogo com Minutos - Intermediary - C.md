@@ -8,7 +8,6 @@ Obs: O jogo tem duração mínima de um (1) minuto e duração máxima de 24 hor
 *linguagem utilizada: C*
 
 Resolution:
-
 =====
 
     #include <stdio.h>

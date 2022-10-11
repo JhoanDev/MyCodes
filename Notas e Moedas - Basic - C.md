@@ -8,7 +8,6 @@ As notas consideradas são de 100, 50, 20, 10, 5, 2. As moedas possíveis são d
 *linguagem utilizada: C*
 
 Resolution:
-
 =====
 
 	#include <stdio.h>

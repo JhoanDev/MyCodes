@@ -10,7 +10,6 @@ Sabendo que o evento pode durar de poucos segundos a vários dias, você deverá
 *linguagem utilizada: Python*
 
 Resolution:
-
 =====
 
     dia,dat1=input().split()

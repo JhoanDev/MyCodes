@@ -1,7 +1,6 @@
 código feito com base nessa questão:
 =====
 
-<<<<<<< HEAD
 Neste problema, você deverá ler 3 palavras que definem o tipo de animal possível segundo o esquema abaixo, da esquerda para a direita.
 
 Em seguida conclua qual dos animais seguintes foi escolhido, através das três palavras fornecidas.
@@ -9,15 +8,7 @@ Em seguida conclua qual dos animais seguintes foi escolhido, através das três 
 *linguagem utilizada: C*
 
 Resolution:
-
 =====
-=======
-Neste problema, você deverá ler 3 palavras que definem o tipo de animal possível segundo o esquema abaixo, da esquerda para a direita.  Em seguida conclua qual dos animais seguintes foi escolhido, através das três palavras fornecidas.
-===============================================================================================================
-linguagem utilizada: C
-===============================================================================================================
-resolution:
->>>>>>> ae17aba516cafca53cfdc3921cfb194f8ff13d1c
 
     #include <stdio.h>
     #include <math.h>

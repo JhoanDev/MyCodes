@@ -8,7 +8,6 @@ Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, in
 *linguagem utilizada: C*
 
 Resolution:
-
 =====
 
     #include <stdio.h>

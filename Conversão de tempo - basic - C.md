@@ -6,7 +6,6 @@ Leia um valor inteiro, que é o tempo de duração em segundos de um determinado
 *linguagem utilizada: C*
 
 Resolution:
-
 =====
 
 	#include<stdio.h>

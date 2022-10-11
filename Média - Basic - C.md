@@ -6,7 +6,6 @@ Leia quatro números (N1, N2, N3, N4), cada um deles com uma casa decimal, corre
 *linguagem utilizada: C*
 
 Resolution:
-
 =====
 s
 	#include <stdio.h>

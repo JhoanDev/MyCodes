@@ -8,7 +8,6 @@ A fórmula para calcular o volume é: (4/3) *pi* R3. Considere (atribua) para pi
 *linguagem utilizada: C*
 
 Resolution:
-
 =====
 
 	#include <stdio.h>
