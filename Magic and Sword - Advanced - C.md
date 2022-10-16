@@ -27,140 +27,168 @@ Resolution:
     #include <math.h>
     #include <string.h>
 
-    struct magic_t 
+    struct magic_t
     {
-    char type[10];
-    int power;
-    int cordenadaX,cordenadaY;
+        char type[10];
+        int power;
+        int cordenadaX, cordenadaY;
     };
 
-    #define max(a, b) ((a > b) ? a : b) //se a for maior que b max retornará (a) caso contrario (b)
-    #define min(a, b) ((a < b) ? a : b) //se a for menor que b min retornará (a) caso contrario (b)
+    #define max(a, b) ((a > b) ? a : b) // se a for maior que b max retornará (a) caso contrario (b)
+    #define min(a, b) ((a < b) ? a : b) // se a for menor que b min retornará (a) caso contrario (b)
 
-    double distance (int x, int y);
+    double distance(int x, int y);
 
-    int point_near (int dxy, int xy,int mxy,int la);
+    int point_near(int dxy, int xy, int mxy, int la);
 
-    int area_power_fire (int p,int ap);
-    int area_power_water (int p,int ap);
-    int area_power_earth (int p,int ap);
-    int area_power_air (int p,int ap);
+    int area_power_fire(int p, int ap);
+    int area_power_water(int p, int ap);
+    int area_power_earth(int p, int ap);
+    int area_power_air(int p, int ap);
 
-    int main(){
-        int teste,largura,altura,x0,y0,areapower,dx,dy;
-        scanf("%d",&teste);
+    int main()
+    {
+        int teste, largura, altura, x0, y0, areapower, dx, dy;
+        scanf("%d", &teste);
         struct magic_t magic; // puxando a estrutura
-        for (teste; teste > 0; teste--){ // quantidade de testes
-            scanf("%d %d %d %d",&largura,&altura,&x0,&y0);
-            scanf("%s %d %d %d",magic.type,&magic.power,&magic.cordenadaX,&magic.cordenadaY);
-            //dx e dy é a coordenada do ponto sobre ou dentro do retângulo mais próximo do centro do círculo
-            dx = point_near(dx,x0,magic.cordenadaX,largura);
-            dy = point_near(dy,y0,magic.cordenadaY,altura);
+        for (teste; teste > 0; teste--)
+        { // quantidade de testes
+            scanf("%d %d %d %d", &largura, &altura, &x0, &y0);
+            scanf("%s %d %d %d", magic.type, &magic.power, &magic.cordenadaX, &magic.cordenadaY);
+            // dx e dy é a coordenada do ponto sobre ou dentro do retângulo mais próximo do centro do círculo
+            dx = point_near(dx, x0, magic.cordenadaX, largura);
+            dy = point_near(dy, y0, magic.cordenadaY, altura);
 
-            if (strcmp(magic.type,"fire")==0){ 
-                areapower = area_power_fire (magic.power,areapower);
-                    if (distance(dx,dy) <= areapower){ // testando se a area de efeito toca no retângulo
-                        printf("200\n");}
-                    else{
-                        printf("0\n");}
+            if (strcmp(magic.type, "fire") == 0)
+            {
+                if (distance(dx, dy) <= area_power_fire(magic.power, areapower))// testando se a area de efeito toca no retângulo
+                { 
+                    printf("200\n");
+                }
+                else
+                {
+                    printf("0\n");
+                }
             }
-            else if(strcmp(magic.type,"water")==0){
-                areapower = area_power_water (magic.power,areapower);     
-                            if (distance(dx,dy) <= areapower){
-                                printf("300\n");}
-                            else{
-                                printf("0\n");}
+            else if (strcmp(magic.type, "water") == 0)
+            {
+                if (distance(dx, dy) <= area_power_water(magic.power, areapower))
+                {
+                    printf("300\n");
+                }
+                else
+                {
+                    printf("0\n");
+                }
             }
-            else if (strcmp(magic.type,"earth")==0){
-                areapower = area_power_earth (magic.power,areapower);        
-                            if (distance(dx,dy) <= areapower){
-                                printf("400\n");}
-                            else{
-                                printf("0\n");}
+            else if (strcmp(magic.type, "earth") == 0)
+            {
+                if (distance(dx, dy) <= area_power_earth(magic.power, areapower))
+                {
+                    printf("400\n");
+                }
+                else
+                {
+                    printf("0\n");
+                }
             }
-            else if (strcmp(magic.type,"air")==0){
-                areapower = area_power_air (magic.power,areapower);  
-                            if (distance(dx,dy) <= areapower){
-                                printf("100\n");}
-                            else{
-                                printf("0\n");}
+            else if (strcmp(magic.type, "air") == 0)
+            {
+                if (distance(dx, dy) <= area_power_air(magic.power, areapower))
+                {
+                    printf("100\n");
+                }
+                else
+                {
+                    printf("0\n");
+                }
             }
         }
         return 0;
     }
 
-    double distance (int x, int y){
-        return(sqrt((x * x) + (y * y)));
+    double distance(int x, int y)
+    {
+        return (sqrt((x * x) + (y * y)));
     }
-    int point_near (int dxy, int xy,int mxy,int la){
+    int point_near(int dxy, int xy, int mxy, int la)
+    {
         dxy = max(xy, min(mxy, xy + la));
         return (dxy - mxy);
     }
 
-    int area_power_fire (int p,int ap){
-        switch (p){ // area de ataque do meu poder de acordo com o tipo
-            case 1:
+    int area_power_fire(int p, int ap)
+    {
+        switch (p)
+        { // area de ataque do meu poder de acordo com o tipo
+        case 1:
             ap = 20;
-                break;
-            case 2:
+            break;
+        case 2:
             ap = 30;
-                break;
-            case 3:
+            break;
+        case 3:
             ap = 50;
-                break;
-            default:
-                break;
-            }
-        return(ap);
+            break;
+        default:
+            break;
+        }
+        return (ap);
     }
 
-    int area_power_water (int p,int ap){
-    switch (p){ 
-            case 1:
+    int area_power_water(int p, int ap)
+    {
+        switch (p)
+        {
+        case 1:
             ap = 10;
-                break;
-            case 2:
+            break;
+        case 2:
             ap = 25;
-                break;
-            case 3:
+            break;
+        case 3:
             ap = 40;
-                break;
-            default:
-                break;
-            }
-        return(ap);
+            break;
+        default:
+            break;
+        }
+        return (ap);
     }
 
-    int area_power_earth (int p,int ap){
-    switch (p){ 
-            case 1:
+    int area_power_earth(int p, int ap)
+    {
+        switch (p)
+        {
+        case 1:
             ap = 25;
-                break;
-            case 2:
+            break;
+        case 2:
             ap = 55;
-                break;
-            case 3:
+            break;
+        case 3:
             ap = 70;
-                break;
-            default:
-                break;
-            }
-        return(ap);
+            break;
+        default:
+            break;
+        }
+        return (ap);
     }
 
-    int area_power_air (int p,int ap){
-    switch (p){ 
-            case 1:
+    int area_power_air(int p, int ap)
+    {
+        switch (p)
+        {
+        case 1:
             ap = 18;
-                break;
-            case 2:
+            break;
+        case 2:
             ap = 38;
-                break;
-            case 3:
+            break;
+        case 3:
             ap = 60;
-                break;
-            default:
-                break;
-            }
-        return(ap);
+            break;
+        default:
+            break;
+        }
+        return (ap);
     }
